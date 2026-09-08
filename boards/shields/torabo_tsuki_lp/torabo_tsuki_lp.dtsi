@@ -70,18 +70,6 @@
         wakeup-source;
     };
 
-    leds {
-        compatible = "gpio-leds";
-        status_led: status_led {
-            gpios = <&bmp 2 GPIO_ACTIVE_HIGH>;
-            label = "Status LED";
-        };
-    };
-
-    status_led_device: status_led_device {
-        compatible = "zmk,status-led";
-        led = <&status_led>;
-    };
 
     bootloader_trigger: bootloader_trigger {
         compatible = "zmk,cdc-acm-bootloader-trigger";
